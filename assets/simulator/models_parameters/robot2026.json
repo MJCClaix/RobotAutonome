@@ -1,0 +1,14 @@
+{
+  "height": 215,
+  "mass": 4000,
+  "rolling_base": {
+    "type": "mecanum",
+    "length": 250,
+    "width": 325,
+    "wheel": {
+      "num_rollers": 9,
+      "diameter": 65,
+      "thickness": 30.4
+    }
+  }
+}
