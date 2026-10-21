@@ -1,0 +1,16 @@
+{
+  "motors": {
+    "locking_torque": 4,
+    "no_load_speed": 333,
+    "reduction_ratio": 30,
+    "base_rotor_inertia": 1.5e-6,
+    "dead_zone": 0.05,
+    "torque_uncertainty": 0.04,
+    "speed_uncertainty": 0.04
+  },
+
+  "wheels": {
+    "nominal_friction": 0.5,
+    "nominal_friction_uncertainty": 0.1
+  }
+}
