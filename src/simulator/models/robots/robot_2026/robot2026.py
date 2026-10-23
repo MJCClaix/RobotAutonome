@@ -30,6 +30,13 @@ class Robot2026(RobotModelBase):
             conaffinity=0,
             mass=self.parameters.mass - 4 * (self.parameters.rolling_base.wheel.num_rollers + 1) * 0.001,
         )
+        frame_body.add_geom(
+            name="aruco_marker_geom",
+            type=mujoco.mjtGeom.mjGEOM_BOX,
+            size=(0.035, 0.035, 0.00001),
+            pos=(0, 0, 0.218),
+            material="aruco_marker_material"
+        )
 
         # noinspection unresolved-references
         wheel_poses = [

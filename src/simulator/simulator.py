@@ -37,13 +37,15 @@ if __name__ == "__main__":
     model, data = scene.compile()
 
     with mujoco.viewer.launch_passive(model, data) as viewer:
+        start_time = time.time()
         while viewer.is_running():
             step_start = time.time()
 
-            data.ctrl[0] = -0.5
-            data.ctrl[1] = 0.5
-            data.ctrl[2] = 0.5
-            data.ctrl[3] = -0.5
+            if start_time + 2 < time.time():
+                data.ctrl[0] = -0.5
+                data.ctrl[1] = 0.5
+                data.ctrl[2] = 0.5
+                data.ctrl[3] = -0.5
 
             # noinspection argument-list
             mujoco.mj_step(model, data)

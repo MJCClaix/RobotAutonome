@@ -27,6 +27,11 @@ class SceneModel:
             type=mujoco.mjtTexture.mjTEXTURE_2D,
             file=str(textures_folder_path / "2027" / "table.png"),
         )
+        self.sim_spec.add_texture(
+            name="aruco_marker_texture",
+            type=mujoco.mjtTexture.mjTEXTURE_2D,
+            file=str(textures_folder_path / "aruco_marker.png"),
+        )
 
         self.sim_spec.add_material(
             name="wood_material",
@@ -36,6 +41,10 @@ class SceneModel:
         self.sim_spec.add_material(
             name="table_material",
             textures=["", "table_texture"],
+        )
+        self.sim_spec.add_material(
+            name="aruco_marker_material",
+            textures=["", "aruco_marker_texture"],
         )
 
         # Décor : Sol et Lumière
